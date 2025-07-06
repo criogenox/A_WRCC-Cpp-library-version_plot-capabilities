@@ -64,6 +64,13 @@ The software capabilities focus on the characterization of wheel-rail rigid cont
   
 </div>
 
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; justify-items: center;">
+  <img src="https://github.com/criogenox/B_ECC-Cpp-version_plot-capabilities_noGUI/assets/53323058/20fb6e2e-8338-4c56-8f62-7a1f6941fb8b.png" style="width: 100%; max-width: 250px;">
+  <img src="https://github.com/criogenox/B_ECC-Cpp-version_plot-capabilities_noGUI/assets/53323058/20fb6e2e-8338-4c56-8f62-7a1f6941fb8b.png" style="width: 100%; max-width: 250px;">
+  <img src="https://github.com/criogenox/B_ECC-Cpp-version_plot-capabilities_noGUI/assets/53323058/20fb6e2e-8338-4c56-8f62-7a1f6941fb8b.png" style="width: 100%; max-width: 250px;"> <!-- Replace with actual image URL -->
+  <img src="https://github.com/criogenox/B_ECC-Cpp-version_plot-capabilities_noGUI/assets/53323058/20fb6e2e-8338-4c56-8f62-7a1f6941fb8b.png" style="width: 100%; max-width: 250px;"> <!-- Replace with actual image URL -->
+</div>
+
 <!-- LICENSE -->
 ## License
 
