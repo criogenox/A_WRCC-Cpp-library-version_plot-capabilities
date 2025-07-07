@@ -21,9 +21,6 @@ The software capabilities focus on the characterization of wheel-rail rigid cont
 - [ ] tan(γa) --> `contact angle` between wheel and rail (formerly, angle of the tangent to the point of contact);
 - [ ] ∆r --> `rolling-radius difference function`, at the predefined lateral amplitude interval;
 - [ ] tan(γc)=f(λ) --> `equivalent conicity` for each movement wavelength of a (equivalent) conical profile, at a specific lateral displacement (wave amplitude).
-
-* `Plot capabilities` enabled by default employing [matplotlib-cpp header-only library][matplotlib-cpp-url].
-* noGUI available (so far) || Qt or wxWidgets user interface planned.
   
 > For the EN15302 Standard scope & detalied computing processes aspects, please visit the [original JavaFx version][WRCC_java-url].
    </p>
@@ -52,9 +49,11 @@ The software capabilities focus on the characterization of wheel-rail rigid cont
     <img class="img"src="https://github.com/criogenox/B_ECC-Cpp-version_plot-capabilities_noGUI/assets/53323058/7f7c66db-97e3-49a1-92d9-df41500b54ae.png" alt="Logo" width="90" height="90"/>
 
 ### Additional info
-* Tested on Ubuntu 24.04 LTS & MS Windows 11
+* Tested on Ubuntu 24.04 LTS & MS Windows 11.
 * Standard template library features up to C++20.
+* `Plot capabilities` enabled by default employing [matplotlib-cpp header-only library][matplotlib-cpp-url].
 * Improved mathematical curves definition using cubic spline interpolation through the easy-to-use [cxx-spline header-only library for modern C++][cxx-spline-url].
+* noGUI available (so far) || Qt or wxWidgets user interface planned.
 
 ###  Plotting output sample (with fully editable properties)
 
