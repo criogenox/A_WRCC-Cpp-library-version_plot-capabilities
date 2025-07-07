@@ -51,6 +51,7 @@ The software capabilities focus on the characterization of wheel-rail rigid cont
 ### Additional info
 * Tested on Ubuntu 24.04 LTS & MS Windows 11.
 * Standard template library features up to C++20.
+* Heavy use of smart pointers for the sake of design simplicity.
 * `Plot capabilities` enabled by default employing [matplotlib-cpp header-only library][matplotlib-cpp-url].
 * Improved mathematical curves definition using cubic spline interpolation through the easy-to-use [cxx-spline header-only library for modern C++][cxx-spline-url].
 * noGUI available (so far) || Qt or wxWidgets user interface planned.
