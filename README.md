@@ -17,10 +17,10 @@
   <p>
 The software capabilities focus on the characterization of wheel-rail rigid contact through the aid of following specific calculations:
 
-- [ ] `Potential wheel-rail contact points detection` by mean of rigid profiles penetration comparison;
-- [ ] `Contact angle tan(γa)` between wheel and rail (formerly, angle of the tangent to the point of contact);
-- [ ] `Rolling-radius difference ∆r function`, at the predefined lateral amplitude interval;
-- [ ] `Equivalent conicity tan(γc)=f(λ)` for each movement wavelength of a (equivalent) conical profile, at a specific lateral displacement (wave amplitude).
+- [ ] `Potential wheel-rail contact points detection` (rigid profiles penetration comparison);
+- [ ] `Contact angle tan(γa)` (angle of the tangent to the point of contact);
+- [ ] `Rolling-radius difference ∆r function` (at the predefined lateral amplitude interval);
+- [ ] `Equivalent conicity tan(γc)=f(λ)` (for each movement wavelength of an equivalent conical profile).
   
 > For the EN15302 Standard scope & detalied computing processes aspects, please visit the [original JavaFx version][WRCC_java-url].
    </p>
