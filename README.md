@@ -52,7 +52,7 @@ The software capabilities focus on the characterization of wheel-rail rigid cont
     <img class="img"src="https://github.com/criogenox/B_ECC-Cpp-version_plot-capabilities_noGUI/assets/53323058/7f7c66db-97e3-49a1-92d9-df41500b54ae.png" alt="Logo" width="90" height="90"/>
 
 ### Additional info
-
+* Tested on Ubuntu 24.04 LTS & MS Windows 11
 * Standard template library features up to C++20.
 * Improved mathematical curves definition using cubic spline interpolation through the easy-to-use [cxx-spline header-only library for modern C++][cxx-spline-url].
 
