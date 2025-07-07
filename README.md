@@ -58,7 +58,7 @@ The software capabilities focus on the characterization of wheel-rail rigid cont
 
 ###  Plotting output sample (with fully editable properties)
 
-| ![Image 1](https://github.com/user-attachments/assets/5af1e805-2b26-4aaa-9e55-8bdfa09a0015.png) | ![Image 2](https://user-images.githubusercontent.com/53323058/462992313-3cdce089-2a1f-42b0-b6e8-a2c559e86198.png) |
+| ![Image 1](https://github.com/criogenox/A_WRCC-Cpp-version_plot-capabilities_noGUI/assets/53323058/a2c6d4c2-7c75-4649-a93c-4f38209eecbb.png) | ![Image 2](https://github.com/criogenox/A_WRCC-Cpp-version_plot-capabilities_noGUI/assets/53323058/a2c6d4c2-7c75-4649-a93c-4f38209eecbb.png) |
 |:---:|:---:|
 | ![Image 1](https://github.com/user-attachments/assets/956010b2-ffde-4987-a830-946a89c592a4.png) | ![Image 2](https://github.com/user-attachments/assets/28d5592c-16c7-4d8c-a106-8b08d94380ec.png) |
 
