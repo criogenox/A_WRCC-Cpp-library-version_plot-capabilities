@@ -18,9 +18,9 @@
 The software capabilities focus on the characterization of wheel-rail rigid contact through the aid of following specific calculations:
 
 - [ ] Potential wheel-rail `contact points detection` by mean of rigid profiles penetration comparison;
-> * tan(γa) --> `contact angle` between wheel and rail (formerly, angle of the tangent to the point of contact);
-> * ∆r --> `rolling-radius difference function`, at the predefined lateral amplitude interval;
-> * tan(γc)=f(λ) --> `equivalent conicity` for each movement wavelength of a (equivalent) conical profile, at a specific lateral displacement (wave amplitude).
+- [ ] tan(γa) --> `contact angle` between wheel and rail (formerly, angle of the tangent to the point of contact);
+- [ ] ∆r --> `rolling-radius difference function`, at the predefined lateral amplitude interval;
+- [ ] tan(γc)=f(λ) --> `equivalent conicity` for each movement wavelength of a (equivalent) conical profile, at a specific lateral displacement (wave amplitude).
 
 * `Plot capabilities` enabled by default employing [matplotlib-cpp header-only library][matplotlib-cpp-url].
 * noGUI available (so far) || Qt or wxWidgets user interface planned.
