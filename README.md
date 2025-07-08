@@ -21,7 +21,13 @@ The software capabilities focus on the characterization of wheel-rail rigid cont
 - [ ] `Contact angle tan(γa).`
 - [ ] `Rolling-radius difference ∆r function.`
 - [ ] `Equivalent conicity tan(γc)=f(λ).`
-  
+
+#  Plotting output sample (with fully editable properties)
+
+| ![Image 1](https://github.com/criogenox/A_WRCC-Cpp-version_plot-capabilities_noGUI/assets/53323058/5af1e805-2b26-4aaa-9e55-8bdfa09a0015.png) | ![Image 2](https://github.com/criogenox/A_WRCC-Cpp-version_plot-capabilities_noGUI/assets/53323058/a2c6d4c2-7c75-4649-a93c-4f38209eecbb.png) |
+|:---:|:---:|
+| ![Image 1](https://github.com/criogenox/A_WRCC-Cpp-version_plot-capabilities_noGUI/assets/53323058/956010b2-ffde-4987-a830-946a89c592a4.png) | ![Image 2](https://github.com/criogenox/A_WRCC-Cpp-version_plot-capabilities_noGUI/assets/53323058/28d5592c-16c7-4d8c-a106-8b08d94380ec.png) |
+
 > For the EN15302 Standard scope & detalied computing processes aspects, please visit the [original JavaFx version][WRCC_java-url].
    </p>
    <div>
@@ -55,12 +61,6 @@ The software capabilities focus on the characterization of wheel-rail rigid cont
 * `Plot capabilities` enabled by default employing [matplotlib-cpp header-only library][matplotlib-cpp-url].
 * Improved mathematical curves definition using cubic spline interpolation through the easy-to-use [cxx-spline header-only library for modern C++][cxx-spline-url].
 * noGUI available (so far) || Qt or wxWidgets user interface planned.
-
-###  Plotting output sample (with fully editable properties)
-
-| ![Image 1](https://github.com/criogenox/A_WRCC-Cpp-version_plot-capabilities_noGUI/assets/53323058/5af1e805-2b26-4aaa-9e55-8bdfa09a0015.png) | ![Image 2](https://github.com/criogenox/A_WRCC-Cpp-version_plot-capabilities_noGUI/assets/53323058/a2c6d4c2-7c75-4649-a93c-4f38209eecbb.png) |
-|:---:|:---:|
-| ![Image 1](https://github.com/criogenox/A_WRCC-Cpp-version_plot-capabilities_noGUI/assets/53323058/956010b2-ffde-4987-a830-946a89c592a4.png) | ![Image 2](https://github.com/criogenox/A_WRCC-Cpp-version_plot-capabilities_noGUI/assets/53323058/28d5592c-16c7-4d8c-a106-8b08d94380ec.png) |
 
 <!-- LICENSE -->
 ## License
