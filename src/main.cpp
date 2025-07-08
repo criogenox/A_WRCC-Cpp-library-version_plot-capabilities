@@ -10,26 +10,25 @@ using std::ifstream;
 
 int main() {
     //#####################################################
-    const string std_cal = "../data/dr_ce_E9.dat";
-    const string bench = "../data/dr_ce_E9_bench.dat";
-    const string wd = "../data/RUIC519A.dat";
-    const string wi = "../data/RUIC519B.dat";
-    const string r = "../data/SUIC519A.dat";
+    const auto std_cal = "../data/dr_ce_E9.dat";
+    const auto bench = "../data/dr_ce_E9_bench.dat";
+    const auto wd = "../data/RUIC519A.dat";
+    const auto wi = "../data/RUIC519B.dat";
+    const auto r = "../data/SUIC519A.dat";
 
     const DataReader reader(std_cal);
-    const vector<double> &drs = reader.getColumn(0);
+    const auto &drs = reader.getColumn(0);
 
     const DataReader wheelod(wd), wheeloi(wi), railo(r);
-    const vector<double> &y1 = railo.getColumn(0);
-    const vector<double> &zp1 = railo.getColumn(1);
-    const vector<double> &y2 = wheelod.getColumn(0);
-    const vector<double> &zp2d = wheelod.getColumn(1);
-    const vector<double> &zp2i = wheeloi.getColumn(1);
+    const auto &y1 = railo.getColumn(0);
+    const auto &zp1 = railo.getColumn(1);
+    const auto &y2 = wheelod.getColumn(0);
+    const auto &zp2d = wheelod.getColumn(1);
+    const auto &zp2i = wheeloi.getColumn(1);
     // #***************************************************
     // type=c; % (-1) asymmetric case - 5 / 6 / 7 / 8 / 9
     //         %  (1)  symmetric case - 1 / 2 / 3 / 4
     constexpr int c{-1};
-    // #***************************************************
     // #***************************************************
     // ## yii=(-6.8:0.1:6.8); % 1 / 2 / 3 / 5 / 9  || n=137
     // ## yii=(-7.1:0.1:7.1); % 4                  || n=143
@@ -73,15 +72,11 @@ int main() {
     auto &y_2 = rail_sys.get_y_2();
     auto &zp_1 = rail_sys.get_zp_1();
 
-    const double dr0 = rr0 - rl0;
-
+    constexpr double dr0 = rr0 - rl0;
+    int sign = (dr0 > 0) ? -1 : 1;
     vector<double> dr(rrr_final.size());
     for (int i = 0; i < rrr_final.size(); ++i) {
-        if (dr0 > 0) {
-            dr[i] = (rrr_final[i] - rrl_final[i]) - dr0 / 2;
-        } else {
-            dr[i] = (rrr_final[i] - rrl_final[i]) + dr0 / 2;
-        }
+        dr[i] = (rrr_final[i] - rrl_final[i]) + sign * dr0 / 2;
     }
     // ---------------
     Plot(y_1, y_2, zp_1, zp_2d, zp_2i, linr, linl, wd, wi, r);

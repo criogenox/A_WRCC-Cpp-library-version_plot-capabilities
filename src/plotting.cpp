@@ -42,6 +42,16 @@ public:
         plotdr();
     }
 
+    ~Plot() {
+        bench = nullptr;
+        c = nullptr;
+        ycp = nullptr;
+        ang = nullptr;
+        ys = nullptr;
+        dr = nullptr;
+        drs = nullptr;
+    }
+
     static void show() {
         plt::show();
     }
