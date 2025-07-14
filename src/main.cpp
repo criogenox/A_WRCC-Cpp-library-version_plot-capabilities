@@ -1,5 +1,3 @@
-#pragma once
-
 #include <iostream>
 #include "plotting.cpp"
 #include "conicity.h"
