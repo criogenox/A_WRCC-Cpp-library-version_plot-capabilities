@@ -59,7 +59,7 @@ The software capabilities focus on the characterization of wheel-rail rigid cont
 * Standard template library features up to C++20.
 * Heavy use of smart pointers for the sake of design simplicity.
 * `Plot capabilities` enabled by default employing [matplotlib-cpp header-only library][matplotlib-cpp-url].
-* Improved mathematical curves definition using cubic spline interpolation through the easy-to-use [cxx-spline header-only library for modern C++][cxx-spline-url].
+* Improved mathematical curves definition using monotone cubic Hermite interpolator with PCHIP (Fritsch–Carlson) slope construction.
 * noGUI available (so far) || Qt or wxWidgets user interface planned.
 
 <!-- LICENSE -->
@@ -72,5 +72,4 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [linkedin-shield]: https://user-images.githubusercontent.com/53323058/230575198-fa1acbf4-8f82-4d8e-b245-3979276bc240.png
 [linkedin-url]: https://www.linkedin.com/in/criogenox/
 [matplotlib-cpp-url]: https://github.com/lava/matplotlib-cpp/tree/master
-[cxx-spline-url]: https://github.com/snsinfu/cxx-spline
 [WRCC_java-url]: https://github.com/criogenox/A_WRCC-Wheel-Rail-Contact-Characterization
