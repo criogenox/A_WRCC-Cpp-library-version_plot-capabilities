@@ -6,6 +6,13 @@
 #include <vector>
 #include <memory>
 #include <cassert>
+#include "pchip.h"
+#include <cassert>
+#include <numeric>
+#include <algorithm>
+#include <complex>
+#include <span>
+#include "input.h"
 
 class Con {
 protected:

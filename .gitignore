@@ -42,3 +42,6 @@ resources/
 *.exe
 *.out
 *.app
+
+# Text Files
+*.asc

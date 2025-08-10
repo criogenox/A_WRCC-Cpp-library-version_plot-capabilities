@@ -6,6 +6,10 @@
 #include <memory>
 #include <vector>
 #include <random>
+#include <cmath>
+#include <algorithm>
+#include <span>
+#include "pchip.h"
 
 using std::vector;
 using std::string;
@@ -43,6 +47,10 @@ public:
 
     [[nodiscard]] const std::vector<double> &get_rrl() const;
 
+    [[nodiscard]] const std::vector<double> &get_radr() const;
+
+    [[nodiscard]] const std::vector<double> &get_radl() const;
+
     [[nodiscard]] vector<std::pair<double, double> > &get_linl() const;
 
     [[nodiscard]] vector<std::pair<double, double> > &get_linr() const;
@@ -56,12 +64,16 @@ public:
 private:
     [[nodiscard]] std::pair<double, const long> rollRadious(const vector<double> &zp_c) const;
 
+    static double dotProduct(const std::vector<double> &a, const std::vector<double> &b);
+
     void contZone(std::vector<std::pair<double, double> > &lin, const double R[2][2],
-                  vector<double> &rrp, const vector<double> &y2, const vector<double> &zp2,
-                  double rr, int sign, double d_l, double g) const;
+                  vector<double> &rrp, vector<double> &radp, const vector<double> &y2,
+                  const vector<double> &zp2, double rr, int sign,
+                  double d_l, double g) const;
 
     void rotation(const std::unique_ptr<std::vector<std::pair<double, double> > > &lin,
-                  const std::unique_ptr<vector<double> > &rrp, double rr,
+                  const std::unique_ptr<vector<double> > &rrp,
+                  const std::unique_ptr<vector<double> > &radp, double rr,
                   double d_l, double cer, double s, int sign) const;
 
     const double &s;
@@ -69,6 +81,8 @@ private:
     const std::vector<double> &zp2i;
     std::unique_ptr<vector<double> > rrl = std::make_unique<vector<double> >();
     std::unique_ptr<vector<double> > rrr = std::make_unique<vector<double> >();
+    std::unique_ptr<vector<double> > radl = std::make_unique<vector<double> >();
+    std::unique_ptr<vector<double> > radr = std::make_unique<vector<double> >();
     std::unique_ptr<std::vector<std::pair<double, double> > > linl = std::make_unique<std::vector<std::pair<double,
         double> > >();
     std::unique_ptr<std::vector<std::pair<double, double> > > linr = std::make_unique<std::vector<std::pair<double,

@@ -1,10 +1,8 @@
-#pragma once
-
 #include <regex>
 
 #include "matplotlibcpp.h"
-#include "input.cpp"
-#include "spline.hpp"
+#include "input.h"
+#include "pchip.h"
 
 namespace plt = matplotlibcpp;
 using std::vector;
@@ -15,13 +13,13 @@ public:
     Plot(const string &bench, const int &c, const vector<double> &ycp, const vector<double> &ang)
         : bench(&bench), c(&c), ycp(&ycp), ang(&ang) {
         if (c == 1) {
-            auto splinep = cubic_spline(ycp, ang);
+            Pchip splinep(ycp, ang);
             const vector<double> ycpc = Linspace(ycp[0], ycp[ycp.size() - 1], 0.01).linspacec();
             vector<double> angpc;
             angpc.reserve(ycpc.size());
             std::ranges::transform(cbegin(ycpc), cend(ycpc), std::back_insert_iterator(angpc),
                                    [&splinep](const double &yi_i) {
-                                       return splinep(yi_i);
+                                       return splinep.interpolate(yi_i);
                                    });
             plotc(ycpc, angpc);
         } else {
@@ -37,9 +35,10 @@ public:
         plotcp(y_1, zp_1, y_2, zp2i, linl, wi, r, -1);
     }
 
-    Plot(const vector<double> &ys, const vector<double> &dr, const vector<double> &drs)
-        : ys(&ys), dr(&dr), drs(&drs) {
+    Plot(const vector<double> &ys, const vector<double> &dr, const vector<double> &drs, const vector<double> &rad)
+        : ys(&ys), dr(&dr), drs(&drs), rad(&rad) {
         plotdr();
+        plotrad();
     }
 
     ~Plot() {
@@ -50,6 +49,7 @@ public:
         ys = nullptr;
         dr = nullptr;
         drs = nullptr;
+        rad = nullptr;
     }
 
     static void show() {
@@ -231,6 +231,33 @@ private:
         //##############################################################
     }
 
+    void plotrad() const {
+        // const ReadCol reader_col(bench);
+        //*******************  Plotting properties  ********************
+        //##############################################################
+        plt::figure_size(1366, 768);
+        // -------------------------------------------------------------
+        plt::plot(*ys, *rad, {
+                      {"label", "Calculated angle"}, {"color", "blue"},
+                      {"linestyle", "--"}, {"marker", "s"}, {"markersize", "5"}
+                  });
+        // -------------------------------------------------------------
+        plt::legend({{"loc", "lower right"}});
+        // -------------------------------------------------------------
+        // plt::ylim(-30, 20);
+        // -------------------------------------------------------------
+        plt::title("Wheel's Rolling Radii Difference");
+        // -------------------------------------------------------------
+        plt::xlabel("Lateral Wheelset Displacement y [mm]");
+        plt::ylabel("Efective contact angle [tan(γ)]");
+        // -------------------------------------------------------------
+        plt::grid(true);
+        // -------------------------------------------------------------
+        plt::tight_layout();
+        // -------------------------------------------------------------
+        //##############################################################
+    }
+
     const string *bench{};
     const int *c{};
     const vector<double> *ycp{};
@@ -238,4 +265,5 @@ private:
     const vector<double> *ys{};
     const vector<double> *dr{};
     const vector<double> *drs{};
+    const vector<double> *rad{};
 };

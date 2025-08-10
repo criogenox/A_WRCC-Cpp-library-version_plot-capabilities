@@ -11,7 +11,7 @@ set(LIBS_PATH "${PROJECT_SOURCE_DIR}/libs")
 set(HEADERS_PATH "${PROJECT_SOURCE_DIR}/headers")
 set(SRC_PATH "${PROJECT_SOURCE_DIR}/src")
 set(DATA_PATH "${PROJECT_SOURCE_DIR}/data")
-set(PYLIBS_PATH "/home/<user_name>/.local/lib/")
+set(PYLIBS_PATH "/home/emilio/.local/lib/")
 set(PYHS_PATH "/usr/include/python3.12/")
 #-----------#-----------#-----------#
 
