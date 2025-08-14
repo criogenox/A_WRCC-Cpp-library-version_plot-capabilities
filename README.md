@@ -11,7 +11,7 @@
   </p>
 </div>
 
-## About the project
+## About the project (Qt6 GUI update in progress)
 
 <div align="justify">
   <p>
