@@ -24,9 +24,9 @@ The software capabilities focus on the characterization of wheel-rail rigid cont
 
 ###  Plotting output sample (with fully editable properties)
 
-| ![Image 1](https://github.com/criogenox/A_WRCC-Cpp-version_plot-capabilities_noGUI/assets/53323058/5af1e805-2b26-4aaa-9e55-8bdfa09a0015.png) | ![Image 2](https://github.com/criogenox/A_WRCC-Cpp-version_plot-capabilities_noGUI/assets/53323058/a2c6d4c2-7c75-4649-a93c-4f38209eecbb.png) |
+| ![Image 1](https://github.com/criogenox/A_WRCC-Cpp-version_plot-capabilities_noGUI/assets/53323058/6eb3c726-e97c-4d3c-a0c0-5c15279ea657.png) | ![Image 2](https://github.com/criogenox/A_WRCC-Cpp-version_plot-capabilities_noGUI/assets/53323058/bc4ec8c1-ed3a-4e2b-8868-91ba4e5595e9.png) |
 |:---:|:---:|
-| ![Image 1](https://github.com/criogenox/A_WRCC-Cpp-version_plot-capabilities_noGUI/assets/53323058/956010b2-ffde-4987-a830-946a89c592a4.png) | ![Image 2](https://github.com/criogenox/A_WRCC-Cpp-version_plot-capabilities_noGUI/assets/53323058/28d5592c-16c7-4d8c-a106-8b08d94380ec.png) |
+| ![Image 1](https://github.com/criogenox/A_WRCC-Cpp-version_plot-capabilities_noGUI/assets/53323058/d1234b59-c556-49bb-b34f-91274ac097ee.png) | ![Image 2](https://github.com/criogenox/A_WRCC-Cpp-version_plot-capabilities_noGUI/assets/53323058/9963db95-3261-44e3-982f-9e1d6f609c7f.png) |
 
 > For the EN15302 Standard scope & detalied computing processes aspects, please visit the [original JavaFx version][WRCC_java-url].
    </p>
