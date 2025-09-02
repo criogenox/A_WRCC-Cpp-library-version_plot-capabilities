@@ -17,10 +17,10 @@
   <p>
 The software capabilities focus on the characterization of wheel-rail rigid contact through the aid of following specific calculations:
 
-- [ ] `Potential wheel-rail contact points detection.`
-- [ ] `Contact angle tan(γa).`
-- [ ] `Rolling-radius difference ∆r function.`
-- [ ] `Equivalent conicity tan(γc)=f(λ).`
+- [x] `Potential wheel-rail contact points detection.`
+- [x] `Contact angle tan(γa).`
+- [x] `Rolling-radius difference ∆r function.`
+- [x] `Equivalent conicity tan(γc)=f(λ).`
 
 ###  Plotting output sample (with fully editable properties)
 
@@ -60,7 +60,6 @@ The software capabilities focus on the characterization of wheel-rail rigid cont
 * Heavy use of smart pointers for the sake of design simplicity.
 * `Plot capabilities` enabled by default employing [matplotlib-cpp header-only library][matplotlib-cpp-url].
 * Improved mathematical curves definition using monotone cubic Hermite interpolator with PCHIP (Fritsch–Carlson) slope construction.
-* noGUI available (so far) || Qt or wxWidgets user interface planned.
 
 <!-- LICENSE -->
 ## License
