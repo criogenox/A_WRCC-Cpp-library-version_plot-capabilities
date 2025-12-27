@@ -64,7 +64,8 @@ The software capabilities focus on the characterization of wheel-rail rigid cont
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+User interface distributed under the GPL-3.0 License. See [GUI-LICENSE.txt][gui-license-url] for more information.
+Calculation libraries distributed under the MIT License. See [LIB-LICENSE.txt][lib-license-url] for more information.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -72,3 +73,5 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [linkedin-url]: https://www.linkedin.com/in/criogenox/
 [matplotlib-cpp-url]: https://github.com/lava/matplotlib-cpp/tree/master
 [WRCC_java-url]: https://github.com/criogenox/A_WRCC-Wheel-Rail-Contact-Characterization
+[gui-license-url]: https://github.com/criogenox/A_WRCC-Cpp-library-version_plot-capabilities?tab=GPL-3.0-1-ov-file
+[lib-license-url]: https://github.com/criogenox/A_WRCC-Cpp-library-version_plot-capabilities?tab=MIT-2-ov-file
