@@ -65,6 +65,7 @@ The software capabilities focus on the characterization of wheel-rail rigid cont
 ## License
 
 User interface distributed under the GPL-3.0 License. See [GUI-LICENSE.txt][gui-license-url] for more information.
+
 Calculation libraries distributed under the MIT License. See [LIB-LICENSE.txt][lib-license-url] for more information.
 
 <!-- MARKDOWN LINKS & IMAGES -->
