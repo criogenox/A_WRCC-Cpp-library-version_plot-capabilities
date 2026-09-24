@@ -3,7 +3,7 @@
 
 # Build scripts
 *.txt.user
-*.cmake
+#*.cmake
 *.json
 makefile
 
@@ -12,6 +12,7 @@ cmake-build-release/
 cmake-build-minisizerel/
 cmake-build-debug/
 resources/
+.idea
 
 # Compiled Object files
 *.slo
