@@ -53,15 +53,16 @@ namespace WRCC::UI {
         titleLayout->setContentsMargins(6, 0, 6, 0);
 
         auto *mainTitle = new QLabel("Wheel / Rail Contact Characterization", titleCard);
-        mainTitle->setStyleSheet("font-size: 13.5pt; font-weight: bold; color: #ffffff; background: transparent;");
+        mainTitle->setStyleSheet("font-size: 13pt; font-weight: bold; color: #ffffff; background: transparent;");
         mainTitle->setAlignment(Qt::AlignCenter);
 
         auto *subTitle = new QLabel("Equivalent Conicity & Contact Geometry Analysis", titleCard);
-        subTitle->setStyleSheet("font-size: 11pt; color: #e0f2fe; font-weight: 500; background: transparent;");
+        subTitle->setStyleSheet("font-size: 10pt; color: #e0f2fe; font-weight: 500; background: transparent;");
         subTitle->setAlignment(Qt::AlignCenter);
 
-        auto *stdBadge = new QLabel("\u2014 Compliant with European Standard EN 15302:2008+A1:2010 (Annex E) \u2014",
-                                    titleCard);
+        auto *stdBadge = new QLabel(
+            "\u2014 Compliant with European Standard EN 15302:2008+A1:2010 (Annex B/E/F) \u2014",
+            titleCard);
         stdBadge->setStyleSheet("font-size: 9pt; color: #bfdbfe; font-style: italic; background: transparent;");
         stdBadge->setAlignment(Qt::AlignCenter);
 
@@ -226,9 +227,10 @@ namespace WRCC::UI {
         auto *infoLabel = new QLabel(
             "<h3 style='color: #60a5fa; margin-top: 0;'>Calculation Modes Guide</h3>"
             "<p style='line-height: 1.45; color: #e2e8f0; font-size: 10pt;'>"
-            "<b>\u2022 EN 15302 Benchmark Cases (E1 \u2014 E9):</b><br/>"
+            "<b>\u2022 EN 15302 Equivalent Conicity Benchmark Cases (E1 \u2014 E9):</b><br/>"
             "Standardized validation against reference cases defined in Annex E of the EN 15302:2008+A1:2010 standard. "
-            "Includes predefined symmetric and asymmetric combinations with upper and lower tolerance limits for equivalent conicity."
+            "Includes predefined wheel/rail combinations (symmetric and asymmetric) with upper and lower tolerance "
+            "limits."
             "</p>"
             "<p style='line-height: 1.45; color: #e2e8f0; font-size: 10pt;'>"
             "<b>\u2022 General Wheel-Rail Contact Calculation:</b><br/>"
@@ -281,7 +283,7 @@ namespace WRCC::UI {
                 "by computing the full set of contact parameters.</p>"
 
                 "<p style='font-size: 12px; font-style: italic; text-align: center;'>"
-                "Version: 1.2-beta</p>"
+                "Version: 2.0-beta</p>"
 
                 "<p style='font-size: 14px; font-weight: bold; text-align: left;'>"
                 "Key Features:</p>"

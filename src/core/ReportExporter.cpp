@@ -53,8 +53,8 @@ namespace WRCC::Core {
         QList<QString> figureDirs;
         figureDirs.append(reportFiguresDir);
 
-        if (QDir("docs/figures").exists()) {
-            QString docsFigures = QDir("docs/figures").absolutePath();
+        if (QDir("docs/outputs/figures").exists()) {
+            QString docsFigures = QDir("docs/outputs/figures").absolutePath();
             if (docsFigures != QDir(reportFiguresDir).absolutePath()) {
                 figureDirs.append(docsFigures);
             }
@@ -244,7 +244,7 @@ namespace WRCC::Core {
                 << "</div>\n"
                 << "<h2>3. Characteristic Visualizations</h2>\n";
 
-        // Also save PNG copies into docs/figures/ directory
+        // Also save PNG copies into docs/outputs/figures/ directory
         saveFigureImages(filePath, data);
 
         if (embedBase64) {

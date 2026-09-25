@@ -375,13 +375,11 @@ namespace WRCC::UI {
     void CalculateWindow::createMenuBar() {
         auto *menuBar = new QMenuBar(this);
 
-        // File Menu
         auto *fileMenu = menuBar->addMenu(tr("&File"));
         auto *exitAction = new QAction(tr("E&xit"), this);
         connect(exitAction, &QAction::triggered, qApp, &QApplication::quit);
         fileMenu->addAction(exitAction);
 
-        // View Menu
         auto *viewMenu = menuBar->addMenu(tr("&View"));
         auto *fullScreenAction = new QAction(tr("Toggle &Full Screen"), this);
         fullScreenAction->setShortcut(QKeySequence(Qt::Key_F11));
@@ -412,9 +410,8 @@ namespace WRCC::UI {
         connect(returnLauncherAction, &QAction::triggered, this, &CalculateWindow::onReturnToLauncher);
         viewMenu->addAction(returnLauncherAction);
 
-        // Help Menu
         auto *helpMenu = menuBar->addMenu(tr("&Help"));
-        auto *aboutAction = new QAction(tr("About &Calculator"), this);
+        auto *aboutAction = new QAction(tr("About &Characterization"), this);
         connect(aboutAction, &QAction::triggered, this, &CalculateWindow::showAbout);
         helpMenu->addAction(aboutAction);
 
@@ -590,7 +587,7 @@ namespace WRCC::UI {
         const QString defaultName = "Final Technical Report " + QDateTime::currentDateTime().toString(
                                         "yyyy.MM.dd-HHmmss") +
                                     ".html";
-        const QString docsPath = QString::fromStdString(resolvePath("docs"));
+        const QString docsPath = QString::fromStdString(resolvePath("docs/outputs"));
         QDir().mkpath(docsPath);
         const QString defaultFilePath = QDir(docsPath).filePath(defaultName);
         QString filePath = QFileDialog::getSaveFileName(this, "Save Report as HTML", defaultFilePath,
@@ -631,7 +628,7 @@ namespace WRCC::UI {
         const QString defaultName = "Final Technical Report " + QDateTime::currentDateTime().toString(
                                         "yyyy.MM.dd-HHmmss") +
                                     ".md";
-        const QString docsPath = QString::fromStdString(resolvePath("docs"));
+        const QString docsPath = QString::fromStdString(resolvePath("docs/outputs"));
         QDir().mkpath(docsPath);
         const QString defaultFilePath = QDir(docsPath).filePath(defaultName);
         QString filePath = QFileDialog::getSaveFileName(this, "Save Report as Markdown", defaultFilePath,
@@ -674,7 +671,6 @@ namespace WRCC::UI {
             }
 
             // Full range [-13, 13] mm with step 0.1 for contact points detection
-            // constexpr double min_contact = -13.0, max_contact = 13.0 , dy = 0.1;
             const auto ys_full = Linspace(-13, 13, 0.1).linspacec();
 
             ConPon rail_sys(y1, y2, zp1, zp2d, zp2i, 0.0, s);
@@ -797,7 +793,7 @@ namespace WRCC::UI {
                 "by computing the full set of contact parameters.</p>"
 
                 "<p style='font-size: 12px; font-style: italic; text-align: center;'>"
-                "Version: 1.2-beta</p>"
+                "Version: 2.0-beta</p>"
 
                 "<p style='font-size: 14px; font-weight: bold; text-align: left;'>"
                 "Key Features:</p>"

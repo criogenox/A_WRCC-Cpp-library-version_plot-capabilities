@@ -98,7 +98,7 @@ namespace WRCC::UI {
         );
         auto *headerLayout = new QVBoxLayout(headerCard);
         headerLayout->setContentsMargins(4, 4, 4, 4);
-        auto *titleLabel = new QLabel("EN15302:2008+A1:2010\n****** Testing Cases ******", headerCard);
+        auto *titleLabel = new QLabel("EN 15302:2008+A1:2010\n****** Testing Cases ******", headerCard);
         titleLabel->setAlignment(Qt::AlignCenter);
         titleLabel->setStyleSheet("font-weight: bold; font-size: 11pt; color: #0f172a; line-height: 1.3;");
         headerLayout->addWidget(titleLabel);
@@ -128,7 +128,6 @@ namespace WRCC::UI {
         infoLayout->addWidget(infoLabel);
         leftLayout->addWidget(infoCard);
 
-        // Subtitle Section
         auto *subtitleLabel = new QLabel("Annex E \u2014 Calculation Reference", leftPanel);
         subtitleLabel->setAlignment(Qt::AlignCenter);
         subtitleLabel->setStyleSheet(
@@ -236,13 +235,11 @@ namespace WRCC::UI {
     void BenchmarkWindow::createMenuBar() {
         auto *menuBar = new QMenuBar(this);
 
-        // File Menu
         auto *fileMenu = menuBar->addMenu(tr("&File"));
         auto *exitAction = new QAction(tr("E&xit"), this);
         connect(exitAction, &QAction::triggered, qApp, &QApplication::quit);
         fileMenu->addAction(exitAction);
 
-        // View Menu
         auto *viewMenu = menuBar->addMenu(tr("&View"));
         auto *openCalcAction = new QAction(tr("Switch to &General Calculation..."), this);
         connect(openCalcAction, &QAction::triggered, this, &BenchmarkWindow::onOpenCalculateWindow);
@@ -252,7 +249,6 @@ namespace WRCC::UI {
         connect(returnLauncherAction, &QAction::triggered, this, &BenchmarkWindow::onReturnToLauncher);
         viewMenu->addAction(returnLauncherAction);
 
-        // Help Menu
         auto *helpMenu = menuBar->addMenu(tr("&Help"));
         auto *aboutAction = new QAction(tr("About &Benchmark"), this);
         connect(aboutAction, &QAction::triggered, this, &BenchmarkWindow::showAbout);
@@ -481,26 +477,27 @@ namespace WRCC::UI {
     void BenchmarkWindow::showAbout() {
         const QString aboutText =
                 "<h2 style='color: lightblue; text-decoration: underline; text-align: center;'>"
-                "Wheel / Rail Contact Characterization Program</h2>"
+                "Equivalent Conicity Calculation (Benchmark)</h2>"
 
                 "<p style='font-size: 14px; font-weight: bold; text-align: left;'>"
                 "Description:</p>"
 
                 "<p style='text-align: justify; text-indent: 85px;'>"
-                "Railway application aimed to characterize the physical wheel-rail interaction "
-                "by computing the full set of contact parameters.</p>"
+                "Railway application designed to validate the algorithm used to perform the "
+                "equivalent conicity computation according to EN 15302 Standard "
+                "(Annex B: integration of the nonlinear differential equation).</p>"
 
                 "<p style='font-size: 12px; font-style: italic; text-align: center;'>"
-                "Version: 1.2-beta</p>"
+                "Version: 2.0-beta</p>"
 
                 "<p style='font-size: 14px; font-weight: bold; text-align: left;'>"
                 "Key Features:</p>"
 
                 "<ul style='text-align: justify;'>"
-                "<li>Potential wheel-rail contact points detection.</li>"
-                "<li>Effective contact angle tan(γa) determination.</li>"
-                "<li>Rolling-radius difference ∆r function calculation.</li>"
-                "<li>Equivalent conicity f(λ) = tan(γc)  estimation.</li>"
+                "<li>E1-3 symmetric cases implementation.</li>"
+                "<li>Improved detection of ∆r = 0 point (case E4).</li>"
+                "<li>E5-8 asymmetric cases implementation.</li>"
+                "<li>Generalization for dissimilar r/l wheel profiles (case E9).</li>"
                 "</ul>"
 
                 "<p style='text-align: right'>"
