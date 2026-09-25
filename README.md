@@ -59,6 +59,7 @@ Now featuring a complete **Qt6 GUI** for contact analysis with interactive visua
 <div style="display: flex; flex-direction: column; align=center">
     <img class="img" src="docs/repo_figs/Cpp_logo.png" alt="C++" width="90" height="80"/>
     <img class="img" src="docs/repo_figs/CMake_logo.png" alt="CMake" width="90" height="80"/>
+    <img class="img" src="docs/repo_figs/Qt_logo.png" alt="CMake" width="100" height="100"/>
     <img class="img" src="docs/repo_figs/CLion_logo.png" alt="CLion" width="90" height="90"/>
 </div>
 
